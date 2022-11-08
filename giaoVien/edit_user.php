@@ -10,7 +10,11 @@
         $sql="select * from infusers where id='".$id."'";
         $query=mysqli_query($conn,$sql);
         $row=mysqli_fetch_array($query);
-
+        //kiểm tra người được chỉnh sửa là sinh viên hay giáo viên
+        if($row['role'] == 1) // là giáo viên thì không được chỉnh sửa
+        {
+            header("location:manage_user.php");
+        }
         if(isset($_POST['edit']))
         {         
             //Nếu $_POST['password'] = $row['password'] có nghĩa là giáo viên không thay đổi password
