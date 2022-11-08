@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 800px;
+    min-height: 500px;
+    background: #FFF;
+    border: 3px solid  #0e8ded;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    padding: 30px 30px;
+}
+
+.container .login-text {
+    color: #36ceed;
+    font-weight: 300;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 60px;
+    display: block;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container .login-email .input-group{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.container .login-email .input-group input {
+    width: 400px;
+    height: 50px;
+    font-weight: 100;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+.container .login-email .input-group button {
+    width: 400px;
+    height: 50px;
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-align: center;
+    background: #99FFCC;
+    font-family: 'Poppins', sans-serif;
+    color: #0e33ef;
+    border-radius: 10px;
+    transition: .3s;
+    cursor: pointer;
+}
+h2 {
+    color: #0e33ef;
+    font-weight: 800;
+}
+
+.login-register-text a {
+    text-decoration: none;
+    color: #0e33ef;
+}
+
+
+/* User list */
+.wrapper{
+    background: #fff;
+    max-width: 450px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1), 0 32px 64px -48px rgba(0,0,0,0.5);
+  }
+  
+.users{
+    padding: 25px 30px;
+}
+
+.users header, .users-list a{
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.wrapper img{
+    object-fit: cover;
+    border-radius: 50%;
+}
+:is(.user, .users-list) .content{
+    display: flex;
+    align-items: center;
+}
+.users header .content img{
+    height: 40px;
+    width: 40px;
+}
+
+:is(.user, .users-list) .details{
+    color: #000;
+    margin-left: 15px;
+
+}
+:is(.user, .users-list) .details span{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.users .search{
+    margin: 20px 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.users .search .text{
+    font-size: 18px;
+}
+.users .search input{
+    position: absolute;
+    height: 42px;
+    width: calc(100% -50px);
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.users .search input.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.users .search button{
+    width: 47px;
+    height: 42px;
+    border: none;
+    outline: none;
+    color: #333;
+    background: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+.users .search button.active{
+    color: #fff;
+    background: #333;
+}
+.users .search button.active i::before{
+    content: "\f00d";
+}
+.users-list{
+    max-height: 350px;
+    overflow-y: auto;
+}
+.users-list::-webkit-scrollbar{
+    width: 0px;
+  }
+.users-list a{
+    margin-bottom: 10px;
+    page-break-after: 10px;
+    padding-right: 15px;
+    border-bottom-color: #f1f1f1;
+    text-decoration: none;
+}
+
+.users-list a:last-child{
+    border: none;
+    margin-bottom: 0px;
+}
+.users-list a .content img{
+    height: 40px;
+    width: 40px;
+}
+.users-list a .content p{
+    color: #67676a;
+
+}
+.users-list a .status-dot{
+    font-size: 12px;
+    color: #468669;
+    padding-left: 10px;
+}
+/*we will use this class name in php to show offline status*/
+.users-list a .status-dot.offline{
+    color: #ccc;
+  }
+  
+/* Chat area*/
+.chat-area header{
+    display: flex;
+    align-items: center;
+    padding: 18px 30px;
+}
+.chat-area header .back-icon{
+    font-size: 18px;
+    color: #333;
+}
+.chat-area header img{
+    width: 50px;
+    height: 50px;
+    margin: 0 15px;
+}
+.chat-area header span{
+    font-size: 17px;
+    font-weight: 500;
+}
+.chat-box{
+    position: relative;
+    height: 500px;
+    overflow-y: auto;
+    background: #f7f7f7;
+    padding: 10px 30px 20px 30px;
+    box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),inset 0 32px 32px -32px rgb(0 0 0 / 5%);
+}
+.chat-box .chat{
+    margin: 15px 0;
+  }
+.chat-box .chat p{
+    word-wrap: break-word;
+    padding: 8px 16px;
+    box-shadow: 0 0 32px rgb(0 0 0 / 8%),
+                0 16px 16px -16px rgb(0 0 0 / 10%);
+}
+.chat-box .outgoing{
+    display: flex;
+}
+.chat-box .details{
+    margin-left: auto;
+    max-width: calc(100% - 130px);
+}
+.outgoing .details p{
+    background: #333;
+    color: #fff;
+    border-radius: 18px 18px 0 18px;
+}
+.chat-box .incoming{
+    display: flex;
+    align-items: flex-end;
+}
+.chat-box .incoming img{
+    height: 35px;
+    width: 35px;
+}
+.incoming .details{
+    margin-right: auto;
+    margin-left: 10px;
+    max-width: calc(100% - 130px);
+}
+
+.incoming .details p{
+    color: #333;
+    background: #fff;
+    border-radius: 18px 18px 18px 0;
+}
+.chat-area .typing-area{
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.typing-area input{
+    height: 45px;
+    width: calc(100% - 58px);
+    font-size: 17px;
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+.typing-area button{
+    width: 55px;
+    border: none;
+    outline: none;
+    background: #333;
+    color: #fff;
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
